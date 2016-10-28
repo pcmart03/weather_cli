@@ -50,6 +50,6 @@ def five_days(config):
     """Display the five day forecast."""
     weather = weather_request.NewForecast(config.city, FORECAST_URL, APP_ID)
     forecast = weather.get_weather()
-    click.echo("Five Day Forecase for %s" % config.city)
+    click.echo("Five Day Forecast for %s" % config.city)
     table = draw_forecast(forecast)
     click.echo(table.draw())
