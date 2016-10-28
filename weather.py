@@ -22,7 +22,7 @@ pass_config = click.make_pass_decorator(Config, ensure=True)
 
 @click.group()
 @click.option('--city', default=DEFAULT_CITY,
-              help="Set forecast city here.")
+              help="Set forecast city.")
 @pass_config
 def cli(config, city):
     """Main cli function.
