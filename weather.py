@@ -7,6 +7,7 @@ from settings import APP_ID as APP_ID
 
 WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
 FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast"
+DEFAULT_CITY = "Washington, DC"
 
 
 class Config(object):
@@ -20,7 +21,7 @@ pass_config = click.make_pass_decorator(Config, ensure=True)
 
 
 @click.group()
-@click.option('--city', default="Washington, DC",
+@click.option('--city', default=DEFAULT_CITY,
               help="Set forecast city here.")
 @pass_config
 def cli(config, city):

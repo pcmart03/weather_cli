@@ -1,0 +1,5 @@
+click==6.6
+requests==2.11.1
+texttable==0.8.5
+## !! Could not determine repository location
+weather==0.1
